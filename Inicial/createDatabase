@@ -1,0 +1,98 @@
+
+/*
+Cliente
+
+nome - caractere (30)
+CPF - Numerico (11)
+email - caractere (30)
+telefone - caractere (30)
+endereco - caractere (100)
+sexo - caractere (1)
+
+*/
+
+
+/* Cria o Banco de Dados */
+
+create database projeto;
+use projeto;
+
+
+
+/* Cria a tabela de clientes */
+
+create table cliente(
+    nome varchar(30),
+    sexo char(1),
+    email varchar(30),
+    cpf int(11),
+    telefone varchar(30),
+    endereco varchar(100)
+);
+
+
+
+
+use projeto;
+
+
+
+
+/* Verificar quais tabelas existem */
+
+show tables;
+
+
+/* Descreve a estrutura da tabela */
+
+desc cliente;
+
+
+
+
+
+/* sintaxe basica de inserção - INSERT INTO tabela() VALUES() */
+
+
+/* FORMA 1 - OMITINDO AS COLUNAS 
+                As informações devem estar na exata ordem da tabela 
+                Caso alguma coluna não tenha dado, deve escrever NULL*/
+
+insert into cliente values ("joao","m","joao@gmail.com",988638273,null,"maia lacerda - estacio - rio de janeiro - rj");
+
+
+
+
+/* 
+Forma 2 - Declarando as Colunas 
+*/
+
+insert into cliente(nome, sexo, endereco, telefone, cpf) 
+            values ("lilian","f","senador soares - tijuca - rio de janeiro - rj","947785696",887774856);
+
+
+/* 
+Forma 3 - Insert Compacto - Somente MYSQL
+                Permite inserir várias linhas de uma vez
+                Pode declarar as colunas ou não
+*/
+
+
+insert into cliente values  ("ana","f","ana@globo.com",85548962,"548556985","pres antonio carlos - centro - sao paulo - sp"),
+                            ("carla","f","carla@terati.com.br",7745828,"66587458","samuel silva - centro - belo horizonte - mg");
+
+
+
+insert into cliente (nome, sexo, email, cpf, telefone, endereco)
+            values  ("celia","f","celia@gmail.com",541521456,"25078869","riachuelo - centro - rio de janeiro - rj"),
+                    ("jorge","m",null,885755896,"58748895","oscar cury - bom retiro - patos de minas - mg");
+
+
+
+
+
+
+
+
+exit;
+
