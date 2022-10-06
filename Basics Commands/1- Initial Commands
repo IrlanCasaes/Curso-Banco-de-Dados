@@ -1,0 +1,59 @@
+
+/*
+Cliente
+
+nome - caractere (30)
+CPF - Numerico (11)
+email - caractere (30)
+telefone - caractere (30)
+endereco - caractere (100)
+sexo - caractere (1)
+
+*/
+
+
+/* Cria o Banco de Dados */
+
+create database projeto;
+use projeto;
+
+
+
+/* Cria a tabela de clientes */
+
+create table cliente(
+    nome varchar(30),
+    sexo char(1),
+    email varchar(30),
+    cpf int(11),
+    telefone varchar(30),
+    endereco varchar(100)
+);
+
+
+
+
+use projeto;
+
+
+
+
+/* Verificar quais tabelas existem */
+
+show tables;
+
+
+/* Descreve a estrutura da tabela */
+
+desc cliente;
+
+
+
+
+
+
+
+
+
+exit;
+
